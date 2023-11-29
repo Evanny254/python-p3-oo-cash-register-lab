@@ -28,8 +28,7 @@ class CashRegister:
             last_item_price = self.last_transaction_amount
             self.total -= last_item_price
             self.last_transaction_amount = 0
-            removed_item = self.items.pop()
-            print(f"Voided transaction for {removed_item}.")
+            self.items.pop()
         else:
             print("No transactions to void.")
 
