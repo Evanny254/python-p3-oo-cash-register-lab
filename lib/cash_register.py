@@ -19,7 +19,7 @@ class CashRegister:
 
     def apply_discount_success_message(self):
         if self.discount != 0:
-            print(f"After the discount, the total comes to ${self.total:.2f}.")
+            print(f"After the discount, the total comes to ${int(self.total)}.")
         else:
             print("There is no discount to apply.")
 

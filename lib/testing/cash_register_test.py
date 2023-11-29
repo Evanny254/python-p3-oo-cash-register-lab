@@ -69,14 +69,14 @@ class TestCashRegister:
         self.cash_register_with_discount.add_item("macbook air", 1000)
         self.cash_register_with_discount.apply_discount()
         sys.stdout = sys.__stdout__
-        assert(captured_out.getvalue() == "After the discount, the total comes to $800.00.\n")
+        assert(captured_out.getvalue() == "After the discount, the total comes to $800.\n")
         self.reset_register_totals()
 
     def test_apply_discount_reduces_total(self):
         '''reduces the total'''
         self.cash_register_with_discount.add_item("macbook air", 1000)
         self.cash_register_with_discount.apply_discount()
-        assert(self.cash_register_with_discount.total == 800.00)
+        assert(self.cash_register_with_discount.total == 800)
         self.reset_register_totals()
 
     def test_apply_discount_when_no_discount(self):
